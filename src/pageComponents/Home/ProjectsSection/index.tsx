@@ -12,15 +12,18 @@ import {
   Icon,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { useTranslation } from "next-i18next";
 import { FaGithub } from "react-icons/fa";
 
 export default function ProjectsSection() {
+  const { t } = useTranslation();
+
   return (
     <Flex direction="column" gap={10}>
       <Flex justifyContent="space-between" gap={4} alignItems="center">
-        <Heading size="lg">Projects</Heading>
+        <Heading size="lg">{t("home.projects.title")}</Heading>
         <BorderBottomLink href="#contact-section" as={motion.a}>
-          <Box>Contact me</Box>
+          <Box>{t("common.links.contactMe")}</Box>
         </BorderBottomLink>
       </Flex>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={{ base: 10, md: 20 }}>
@@ -47,12 +50,12 @@ export default function ProjectsSection() {
             />
             <Flex direction="column" gap={4}>
               <Flex justifyContent="space-between" alignItems="center">
-                <Heading size="md">{project.title}</Heading>
+                <Heading size="md">{t(project.title) ?? project.title}</Heading>
                 <Link href={project.githubUrl} _hover={{ color: "green" }}>
                   <Icon as={FaGithub} height="6" w="auto" />
                 </Link>
               </Flex>
-              <Text size="md">{project.description}</Text>
+              <Text size="md">{t(project.description)}</Text>
               <Wrap gap={4}>
                 {project.technologies.map((tech, index) => (
                   <Text key={`projectsSectionTechnologiesKey_${tech}_${index}`}>

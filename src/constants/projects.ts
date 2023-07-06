@@ -19,8 +19,7 @@ export const projectsInfo: ProjectInfo[] = [
     githubUrl: "https://github.com/gabrielprrd/designo",
     deployedUrl: "" || undefined,
     title: "Designo",
-    description:
-      "A 7 pages long responsive institutional website with form validation.",
+    description: "home.projects.designo.description",
     technologies: [
       "Next.js",
       "React",
@@ -38,8 +37,7 @@ export const projectsInfo: ProjectInfo[] = [
     githubUrl: "https://github.com/gabrielprrd/kanban-task-management",
     deployedUrl: "" || undefined,
     title: "Kanban Task Management",
-    description:
-      "Fullstack app which users can authenticate and manage kanban boards, including columns, tasks and subtasks.",
+    description: "home.projects.kanban.description",
     technologies: [
       "TRPC",
       "Prisma",
@@ -61,8 +59,7 @@ export const projectsInfo: ProjectInfo[] = [
     githubUrl: "https://github.com/gabrielprrd/password-generator",
     deployedUrl: "" || undefined,
     title: "Password Generator",
-    description:
-      "Simple web app to generate custom password based on user's input.",
+    description: "home.projects.passwordGenerator.description",
     technologies: ["Next.js", "React", "ChakraUi"],
   },
   {
@@ -72,9 +69,8 @@ export const projectsInfo: ProjectInfo[] = [
     },
     githubUrl: "https://github.com/gabrielprrd/gabrielprrd.com",
     deployedUrl: "" || undefined,
-    title: "This website (portfolio)",
-    description:
-      "My portfolio, where I showcase projects and tell more about myself. It has features such as internationalization and dark/white theme.",
+    title: "home.projects.portfolio.title",
+    description: "home.projects.portfolio.description",
     technologies: [
       "Next",
       "React",

@@ -4,6 +4,8 @@ import theme from "@/styles/theme";
 import type { ReactElement, ReactNode } from "react";
 import type { NextPage } from "next";
 import type { AppProps } from "next/app";
+import { appWithTranslation } from "next-i18next";
+import nextI18nConfig from "../../next-i18next.config.mjs";
 import "@/styles/globals.css";
 
 // eslint-disable-next-line @typescript-eslint/ban-types
@@ -25,4 +27,4 @@ const MyApp: AppType = ({ Component, pageProps }: AppPropsWithLayout) => {
   );
 };
 
-export default MyApp;
+export default appWithTranslation(MyApp, nextI18nConfig);

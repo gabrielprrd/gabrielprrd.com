@@ -1,0 +1,68 @@
+{
+    "common": {
+        "links": {
+            "contactMe": "Contato",
+            "downloadCV": "Baixar currículo",
+            "phone": "Telefone"
+        },
+        "languageSelect": {
+            "label": "Selecione idioma"
+        },
+        "themeSwitcher": {
+            "label": "Mudar tema"
+        },
+        "forms": {
+            "input": {
+                "name": {
+                    "label": "Nome"
+                },
+                "email": {
+                    "label": "Email"
+                },
+                "message": {
+                    "label": "Sua mensagem"
+                }
+            },
+            "buttons": {
+                "sendMessage": "Enviar mensagem",
+                "sending": "Enviando"
+            }
+        },
+        "footer": {
+            "heading": "Entre em contato!",
+            "description": "Eu adoraria ouvir sobre seus projetos e como posso ajudar. Por favor, preencha o formulário e entrarei em contato o quanto antes."
+        }
+    },
+    "home": {
+        "hero": {
+            "heading1": "Prazer em conhecê-lo(a)!",
+            "heading2": "Sou Gabriel Afonso.",
+            "description": "Frontend developer e entusiasta de tecnologia vivendo na Alemanha. Amo dar vida a interfaces de usuário desafiantes e acessíveis."
+        },
+        "companies": {
+            "title": "Onde trabalhei",
+            "xhockware": {
+                "description": "O principal foco da Xhockware está em solucões inovadoras para o setor comercial, então integrei a equipe de front-end para desenvolver diferentes features para alguns dos maiores varejistas da Europa"
+                },
+            "exaud": {
+                "description": "Uma consultoria onde aperfeiçoei minhas capacidades de desenvolver aplicaçoes web. Durante minha estadia, tive a oportunidade de colaborar com uma equipe talentosa e trabalhar em projetos para diferentes paises."
+                }
+            },
+        "projects": {
+            "title": "Projetos",
+            "designo": {
+                "description": "Um site institucional de 7 páginas responsivas com validações de formulário."
+            },
+            "kanban": {
+                "description": "Aplicação fullstack na qual usuários podem autenticar-se e gerenciar quadros de kanban, incluindo colunas, tarefas e sub-tarefas."
+            },
+            "passwordGenerator": {
+                "description": "Aplicação web simples para gerar senhas de acordo com o input do usuário."
+            },
+            "portfolio": {
+                "title": "Este site (portfolio)",
+                "description": "Meu portfolio, onde apresento projetos e conto um pouco mais sobre mim. Possui features como internacionalização, temas claro/escuro e validação de formulários."
+            }
+        }
+    }
+}

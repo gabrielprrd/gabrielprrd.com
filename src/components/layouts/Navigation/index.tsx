@@ -5,16 +5,18 @@ import {
   Icon,
   type FlexProps,
   Tooltip,
-  useColorMode,
+  Box,
 } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin, FaPhoneAlt } from "react-icons/fa";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import { AiFillMail } from "react-icons/ai";
 import { CONTACT_INFO } from "@/constants/contactInfo";
 import Link from "@/components/infra/Link";
+import { useTranslation } from "next-i18next";
+import LanguageSelect from "@/components/LanguageSelect";
 
 export default function Navigation(props: FlexProps) {
-  const { colorMode } = useColorMode();
+  const { t } = useTranslation();
 
   return (
     <Flex
@@ -22,7 +24,7 @@ export default function Navigation(props: FlexProps) {
       py={3}
       gap={3}
       justify="space-between"
-      direction={{ base: "column", sm: "row" }}
+      direction={{ sm: "row" }}
       alignItems="center"
       {...props}
     >
@@ -37,7 +39,7 @@ export default function Navigation(props: FlexProps) {
         </Text>
       </Link>
 
-      <Flex gap={3}>
+      <Flex gap={3} alignItems="center">
         <chakra.nav display="flex" gap={3}>
           <Tooltip label="Github" hasArrow>
             <chakra.span>
@@ -60,7 +62,7 @@ export default function Navigation(props: FlexProps) {
             </chakra.span>
           </Tooltip>
         </chakra.nav>
-        <Flex h="full" alignItems="flex-start" gap={3}>
+        <Flex h="full" alignItems="center" gap={3}>
           <Tooltip label="Email" hasArrow shouldWrapChildren>
             <Link href={`mailto:${CONTACT_INFO.email}`}>
               <Icon
@@ -71,7 +73,7 @@ export default function Navigation(props: FlexProps) {
               />
             </Link>
           </Tooltip>
-          <Tooltip label="Phone" hasArrow shouldWrapChildren>
+          <Tooltip label={t("common.links.phone")} hasArrow shouldWrapChildren>
             <Link href={`tel:${CONTACT_INFO.phone}`}>
               <Icon
                 cursor="pointer"
@@ -80,15 +82,29 @@ export default function Navigation(props: FlexProps) {
               />
             </Link>
           </Tooltip>
-          <Tooltip
-            shouldWrapChildren
-            label={`Switch to ${colorMode === "dark" ? "Light" : "Dark"}`}
-            hasArrow
-          >
-            <ThemeSwitcher marginTop={-2} />
-          </Tooltip>
         </Flex>
       </Flex>
+      <Box
+        h="full"
+        alignItems="flex-start"
+        gap={3}
+        display={{ base: "none", md: "flex" }}
+      >
+        <Tooltip
+          shouldWrapChildren
+          label={t("common.themeSwitcher.label")}
+          hasArrow
+        >
+          <ThemeSwitcher marginTop={-2} />
+        </Tooltip>
+        <Tooltip
+          shouldWrapChildren
+          label={t("common.languageSelect.label")}
+          hasArrow
+        >
+          <LanguageSelect marginTop={-1 / 2} />
+        </Tooltip>
+      </Box>
     </Flex>
   );
 }

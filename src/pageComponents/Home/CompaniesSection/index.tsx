@@ -9,12 +9,15 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { useTranslation } from "next-i18next";
 
 export default function CompaniesSection() {
+  const { t } = useTranslation();
+
   return (
     <Flex direction="column" gap={10}>
       <Flex justifyContent="space-between" gap={4}>
-        <Heading size="lg">Where I&apos;ve worked</Heading>
+        <Heading size="lg">{t("home.companies.title")}</Heading>
       </Flex>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={20}>
         {COMPANIES.map((company) => (
@@ -41,7 +44,7 @@ export default function CompaniesSection() {
               >
                 <LinkOverlay href={company.href}>
                   <Heading textTransform="uppercase" size="md">
-                    {company.title}
+                    {t(company.title)}
                   </Heading>
                 </LinkOverlay>
               </Flex>
@@ -49,7 +52,7 @@ export default function CompaniesSection() {
                 <Text size="sm">{company.place}</Text>
                 <Text>{company.time}</Text>
               </Flex>
-              <Text size="sm">{company.description}</Text>
+              <Text size="sm">{t(company.description)}</Text>
             </Flex>
           </LinkBox>
         ))}

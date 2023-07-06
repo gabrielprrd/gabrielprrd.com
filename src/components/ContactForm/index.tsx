@@ -20,11 +20,13 @@ import { chakra } from "@chakra-ui/react";
 import axios from "axios";
 import Toast from "../Toast";
 import BorderBottomButton from "../BorderBottomButton";
+import { useTranslation } from "next-i18next";
 
 const FORM_SUBMIT_HASH = "aeff163b8996ff808cd5ba47dcf6de7a";
 const formSubmitEndpoint = `https://formsubmit.co/ajax/${FORM_SUBMIT_HASH}`;
 
 export default function ContactForm() {
+  const { t } = useTranslation();
   const toast = useToast({ position: "bottom-right", duration: 6000 });
   const createContactForm = useForm<ContactData>({
     resolver: zodResolver(contactFormSchema),
@@ -111,7 +113,7 @@ export default function ContactForm() {
               opacity={0.6}
               display={watchName ? "none" : "block"}
             >
-              Name
+              {t("common.forms.input.name.label")}
             </Form.Label>
             {!!errors.name && (
               <Icon
@@ -153,7 +155,7 @@ export default function ContactForm() {
               opacity={0.6}
               display={watchEmail ? "none" : "block"}
             >
-              Email
+              {t("common.forms.input.email.label")}
             </Form.Label>
             {!!errors.email && (
               <Icon
@@ -195,7 +197,7 @@ export default function ContactForm() {
               opacity={0.6}
               display={watchMessage ? "none" : "block"}
             >
-              Your message
+              {t("common.forms.input.message.label")}
             </Form.Label>
             {!!errors.message && (
               <Icon
@@ -217,7 +219,11 @@ export default function ContactForm() {
 
         <Flex w="full" justifyContent="flex-end" mt={10}>
           <BorderBottomButton type="submit" zIndex={10}>
-            <Box>{isSubmitting ? "Sending" : "Send message"}</Box>
+            <Box>
+              {isSubmitting
+                ? t("common.forms.buttons.sending")
+                : t("common.forms.buttons.sendMessage")}
+            </Box>
           </BorderBottomButton>
         </Flex>
       </SimpleGrid>

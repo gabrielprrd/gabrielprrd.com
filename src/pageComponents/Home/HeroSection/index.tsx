@@ -2,9 +2,12 @@ import BorderBottomLink from "@/components/BorderBottomLink";
 import { CURRICULUM_PDF } from "@/constants/curriculum";
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { useTranslation } from "next-i18next";
 import ProgrammerIllustration from "../../../../public/assets/images/home/hero/programmer-illustration.svg";
 
 export default function HeroSection() {
+  const { t } = useTranslation();
+
   return (
     <Flex
       as={motion.div}
@@ -39,20 +42,13 @@ export default function HeroSection() {
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
           >
-            Nice to meet you!
+            {t("home.hero.heading1")}
           </Heading>
           <Box
             as={motion.div}
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
           >
-            <Heading
-              fontSize={{ base: "4xl", lg: "7xl" }}
-              as="span"
-              lineHeight="-2.5px"
-            >
-              I&apos;m{" "}
-            </Heading>
             <Heading
               as="span"
               textDecoration="underline"
@@ -61,14 +57,7 @@ export default function HeroSection() {
               fontSize={{ base: "4xl", lg: "7xl" }}
               lineHeight="-2.5px"
             >
-              Gabriel Afonso
-            </Heading>
-            <Heading
-              fontSize={{ base: "4xl", lg: "7xl" }}
-              as="span"
-              lineHeight="-2.5px"
-            >
-              .
+              {t("home.hero.heading2")}
             </Heading>
           </Box>
         </Flex>
@@ -79,8 +68,7 @@ export default function HeroSection() {
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
         >
-          I&apos;m a passionate frontend developer based in Germany. I love
-          bringing exciting and accessible user interfaces to life.
+          {t("home.hero.description")}
         </Text>
         <Flex
           as={motion.div}
@@ -89,10 +77,10 @@ export default function HeroSection() {
           animate={{ x: 0, opacity: 1 }}
         >
           <BorderBottomLink href="#contact-section" as={motion.a}>
-            <Box>Contact me</Box>
+            <Box>{t("common.links.contactMe")}</Box>
           </BorderBottomLink>
           <BorderBottomLink href={CURRICULUM_PDF} as={motion.a}>
-            <Box>Download CV</Box>
+            <Box>{t("common.links.downloadCV")}</Box>
           </BorderBottomLink>
         </Flex>
       </Flex>

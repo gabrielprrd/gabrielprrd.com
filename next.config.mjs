@@ -1,8 +1,10 @@
 await import("./src/env.mjs");
+import i18nextConfig from "./next-i18next.config.mjs";
 
 /** @type {import("next").NextConfig} */
 const config = {
   reactStrictMode: true,
+  i18n: i18nextConfig.i18n,
   webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((/** @type {{ test: { test: (arg0: string) => any; }; }} */ rule) =>
@@ -29,10 +31,6 @@ const config = {
     fileLoaderRule.exclude = /\.svg$/i
 
     return config
-  },
-  i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
   },
 };
 

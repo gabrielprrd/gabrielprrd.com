@@ -1,0 +1,68 @@
+{
+    "common": {
+        "links": {
+            "contactMe": "Contact me",
+            "downloadCV": "Download CV",
+            "phone": "Phone"
+        },
+        "languageSelect": {
+            "label": "Select language"
+        },
+        "themeSwitcher": {
+            "label": "Change theme"
+        },
+        "forms": {
+            "input": {
+                "name": {
+                    "label": "Name"
+                },
+                "email": {
+                    "label": "Email"
+                },
+                "message": {
+                    "label": "Your message"
+                }
+            },
+            "buttons": {
+                "sendMessage": "Send message",
+                "sending": "Sending"
+            }
+        },
+        "footer": {
+            "heading": "Reach me out!",
+            "description": "I would love to hear about your project and how I could help. Please fill in the form, and I'll get back to you as soon as possible."
+        }
+    },
+    "home": {
+        "hero": {
+            "heading1": "Nice to meet you!",
+            "heading2": "I'm Gabriel Afonso.",
+            "description": "I'm a passionate frontend developer based in Germany. I love bringing exciting and accessible user interfaces to life."
+        },
+        "companies": {
+            "title": "Where I've worked",
+            "xhockware": {
+                "description": "Xhockware's main focus is creating innovative retail solutions, so I've joined the front-end team to develop different features for some of the largest retailers in Europe."
+                },
+            "exaud": {
+                "description": "A consulting company where I honed my craft in developing web applications. During my tenure, I had the opportunity to collaborate with a talented team and work in some projects for different countries."
+                }
+            },
+        "projects": {
+            "title": "Projects",
+            "designo": {
+                "description": "A 7 pages long responsive institutional website with form validation."
+            },
+            "kanban": {
+                "description": "Fullstack app which users can authenticate and manage kanban boards, including columns, tasks and subtasks."
+            },
+            "passwordGenerator": {
+                "description": "Simple web app to generate custom password based on user's input."
+            },
+            "portfolio": {
+                "title": "This website (portfolio)",
+                "description": "My portfolio, where I showcase projects and tell more about myself. It has features such as internationalization and dark/white theme."
+            }
+        }
+    }
+}

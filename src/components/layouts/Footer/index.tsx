@@ -8,9 +8,12 @@ import {
   SimpleGrid,
   Divider,
 } from "@chakra-ui/react";
+import { useTranslation } from "next-i18next";
 import Navigation from "../Navigation";
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <chakra.footer
       w="full"
@@ -27,12 +30,10 @@ export default function Footer() {
         <SimpleGrid columns={{ base: 1, md: 2 }} gap={20}>
           <Flex direction="column" gap={5}>
             <Heading size="lg" textAlign={{ base: "center", md: "start" }}>
-              Reach me out!
+              {t("common.footer.heading")}
             </Heading>
             <Text textAlign={{ base: "center", md: "start" }}>
-              I would love to hear about your project and how I could help.
-              Please fill in the form, and I&apos;ll get back to you as soon as
-              possible.
+              {t("common.footer.description")}
             </Text>
           </Flex>
           <ContactForm />
