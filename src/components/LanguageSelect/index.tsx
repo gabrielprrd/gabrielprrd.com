@@ -12,7 +12,6 @@ export default function LanguageSelect(props: SelectProps) {
       {...props}
       variant="unstyled"
       textTransform="uppercase"
-      size="xs"
       fontWeight="bold"
       defaultValue={router.locale}
       onChange={(e) =>
