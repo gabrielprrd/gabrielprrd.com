@@ -76,10 +76,18 @@ export default function HeroSection() {
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
         >
-          <BorderBottomLink href="#contact-section" as={motion.a}>
+          <BorderBottomLink
+            href="#contact-section"
+            as={motion.a}
+            aria-label="Navigate to contact form section"
+          >
             <Box>{t("common.links.contactMe")}</Box>
           </BorderBottomLink>
-          <BorderBottomLink href={CURRICULUM_PDF} as={motion.a}>
+          <BorderBottomLink
+            href={CURRICULUM_PDF}
+            as={motion.a}
+            aria-label="Download Curriculum Vitae in pdf format"
+          >
             <Box>{t("common.links.downloadCV")}</Box>
           </BorderBottomLink>
         </Flex>

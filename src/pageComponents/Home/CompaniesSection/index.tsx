@@ -42,7 +42,10 @@ export default function CompaniesSection() {
                 paddingBottom={2}
                 justifyContent="space-between"
               >
-                <LinkOverlay href={company.href}>
+                <LinkOverlay
+                  href={company.href}
+                  aria-label="Go to company's website"
+                >
                   <Heading textTransform="uppercase" size="md">
                     {t(company.title)}
                   </Heading>

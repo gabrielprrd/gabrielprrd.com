@@ -218,7 +218,11 @@ export default function ContactForm() {
         </Form.Field>
 
         <Flex w="full" justifyContent="flex-end" mt={10}>
-          <BorderBottomButton type="submit" zIndex={10}>
+          <BorderBottomButton
+            aria-label="Send message"
+            type="submit"
+            zIndex={10}
+          >
             <Box>
               {isSubmitting
                 ? t("common.forms.buttons.sending")

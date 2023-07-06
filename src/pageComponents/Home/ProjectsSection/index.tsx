@@ -22,7 +22,11 @@ export default function ProjectsSection() {
     <Flex direction="column" gap={10}>
       <Flex justifyContent="space-between" gap={4} alignItems="center">
         <Heading size="lg">{t("home.projects.title")}</Heading>
-        <BorderBottomLink href="#contact-section" as={motion.a}>
+        <BorderBottomLink
+          href="#contact-section"
+          as={motion.a}
+          aria-label="Navigate to contact form section"
+        >
           <Box>{t("common.links.contactMe")}</Box>
         </BorderBottomLink>
       </Flex>
@@ -51,16 +55,20 @@ export default function ProjectsSection() {
             <Flex direction="column" gap={4}>
               <Flex justifyContent="space-between" alignItems="center">
                 <Heading size="md">{t(project.title) ?? project.title}</Heading>
-                <Link href={project.githubUrl} _hover={{ color: "green" }}>
+                <Link
+                  href={project.githubUrl}
+                  _hover={{ color: "green" }}
+                  aria-label="Navigate to project's github page"
+                >
                   <Icon as={FaGithub} height="6" w="auto" />
                 </Link>
               </Flex>
               <Text size="md">{t(project.description)}</Text>
               <Wrap gap={4}>
                 {project.technologies.map((tech, index) => (
-                  <Text key={`projectsSectionTechnologiesKey_${tech}_${index}`}>
-                    {tech}
-                  </Text>
+                  <li key={`projectsSectionTechnologiesKey_${tech}_${index}`}>
+                    <Text>{tech}</Text>
+                  </li>
                 ))}
               </Wrap>
             </Flex>
