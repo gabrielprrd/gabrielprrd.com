@@ -10,7 +10,7 @@ export const COMPANIES: Company[] = [
   {
     title: "Xhockware",
     description:
-      "Xhockware's main focus is on creating innovative retail solutions, so I've helped the front-end team to develop different features for some of the largest retailers in Europe.",
+      "Xhockware's main focus is creating innovative retail solutions, so I've joined the front-end team to develop different features for some of the largest retailers in Europe.",
     place: "Porto, Portugal",
     href: "https://www.xhockware.com/pt-pt/",
     time: "Jun 2021 - May 2022",
