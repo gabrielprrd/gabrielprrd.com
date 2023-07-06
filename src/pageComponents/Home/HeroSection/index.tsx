@@ -1,18 +1,26 @@
-import Link from "@/components/infra/Link";
+import BorderBottomLink from "@/components/BorderBottomLink";
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import ProgrammerIllustration from "../../../../public/assets/images/home/hero/programmer-illustration.svg";
 
 export default function HeroSection() {
   return (
     <Flex
+      as={motion.div}
       direction={{ base: "column", lg: "row-reverse" }}
-      alignItems={{ base: "center", lg: "start" }}
+      alignItems={{ base: "center", lg: "center" }}
       h={{ lg: "80vh" }}
       position="relative"
       gap={10}
       mt={{ base: 10, lg: 0 }}
     >
-      <Box h="auto" w="60vw">
+      <Box
+        h="auto"
+        w="60vw"
+        as={motion.div}
+        initial={{ x: 100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+      >
         <ProgrammerIllustration />
       </Box>
       <Flex
@@ -23,10 +31,20 @@ export default function HeroSection() {
         zIndex={10}
       >
         <Flex direction="column">
-          <Heading fontSize={{ base: "4xl", lg: "7xl" }} lineHeight="-2.5px">
+          <Heading
+            as={motion.h1}
+            fontSize={{ base: "4xl", lg: "7xl" }}
+            lineHeight="-2.5px"
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+          >
             Nice to meet you!
           </Heading>
-          <Box>
+          <Box
+            as={motion.div}
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+          >
             <Heading
               fontSize={{ base: "4xl", lg: "7xl" }}
               as="span"
@@ -54,22 +72,23 @@ export default function HeroSection() {
           </Box>
         </Flex>
 
-        <Text width={{ md: "60%" }}>
+        <Text
+          width={{ md: "60%" }}
+          as={motion.p}
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+        >
           I&apos;m a passionate frontend developer based in Germany. I love
           bringing exciting and accessible user interfaces to life.
         </Text>
-        <Link
-          borderBottomWidth="3px"
-          borderBottomColor="green"
-          _hover={{ textColor: "green" }}
-          fontWeight="medium"
-          fontSize="md"
-          paddingBottom={2}
-          textTransform="uppercase"
-          href="#contact-section"
+        <motion.div
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
         >
-          Contact me
-        </Link>
+          <BorderBottomLink href="#contact-section" as={motion.a}>
+            <Box>Contact me</Box>
+          </BorderBottomLink>
+        </motion.div>
       </Flex>
     </Flex>
   );

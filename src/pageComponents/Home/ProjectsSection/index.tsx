@@ -1,4 +1,7 @@
+import BorderBottomLink from "@/components/BorderBottomLink";
 import Link from "@/components/infra/Link";
+import { projectsInfo } from "@/constants/projects";
+import { bottomToTopVariants } from "@/utils/animations/bottomToTopVariants";
 import {
   Box,
   Flex,
@@ -28,6 +31,11 @@ export default function ProjectsSection() {
             direction="column"
             gap={4}
             key={project.githubUrl}
+            as={motion.div}
+            initial="offscreen"
+            whileInView="onscreen"
+            variants={bottomToTopVariants}
+            viewport={{ once: true }}
           >
             <Box
               backgroundImage={`url(${project.img.src})`}

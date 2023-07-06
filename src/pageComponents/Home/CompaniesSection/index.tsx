@@ -1,4 +1,5 @@
 import { COMPANIES } from "@/constants/companies";
+import { bottomToTopVariants } from "@/utils/animations/bottomToTopVariants";
 import {
   Flex,
   Heading,
@@ -7,6 +8,7 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 export default function CompaniesSection() {
   return (
@@ -17,12 +19,17 @@ export default function CompaniesSection() {
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={20}>
         {COMPANIES.map((company) => (
           <LinkBox
-            as={Flex}
-            direction="column"
+            display="flex"
+            flexDirection="column"
             width="100%"
             height="100%"
             position="relative"
             key={company.href}
+            as={motion.div}
+            initial="offscreen"
+            whileInView="onscreen"
+            variants={bottomToTopVariants}
+            viewport={{ once: true }}
           >
             <Flex direction="column" gap={4}>
               <Flex
