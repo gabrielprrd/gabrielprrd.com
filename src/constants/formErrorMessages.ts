@@ -1,4 +1,4 @@
 export const FORM_ERROR_MESSAGES = {
-  required: "Can't be empty",
-  tooLong: "Must be shorter",
+  required: "common.forms.errorMessages.required",
+  tooLong: "common.forms.errorMessages.tooLong",
 };

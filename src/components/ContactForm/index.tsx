@@ -57,8 +57,10 @@ export default function ContactForm() {
       toast({
         render: () => (
           <Toast>
-            <Heading size="sm">Thank you for contacting me.</Heading>
-            <Text>I will reach you back as soon as possible.</Text>
+            <Heading size="sm">
+              {t("common.toasts.sendMessageSuccess.heading")}
+            </Heading>
+            <Text>{t("common.toasts.sendMessageSuccess.description")}</Text>
           </Toast>
         ),
       });
@@ -68,9 +70,9 @@ export default function ContactForm() {
         render: () => (
           <Toast borderColor="tomato">
             <Heading size="sm">
-              An error ocurred while sending the email.
+              {t("common.toasts.sendMessageError.heading")}
             </Heading>
-            <Text>Please, try again later or click on the email icon.</Text>
+            <Text>{t("common.toasts.sendMessageError.heading")}</Text>
           </Toast>
         ),
       });

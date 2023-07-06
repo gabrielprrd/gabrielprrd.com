@@ -26,6 +26,20 @@
             "buttons": {
                 "sendMessage": "Enviar mensagem",
                 "sending": "Enviando"
+            },
+            "errorMessages": {
+                "tooLong": "Muito longo",
+                "required": "Obrigatório"
+            }
+        },
+        "toasts": {
+            "sendMessageSuccess": {
+                "heading": "Obrigado por entrar em contato.",
+                "description": "Responderei o quanto antes."
+            },
+            "sendMessageError": {
+                "heading": "Um erro ocorreu ao enviar o email.",
+                "description": "Por favor, tente novamente ou clique no ícone de email."
             }
         },
         "footer": {
