@@ -1,4 +1,5 @@
 import BorderBottomLink from "@/components/BorderBottomLink";
+import { CURRICULUM_PDF } from "@/constants/curriculum";
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import ProgrammerIllustration from "../../../../public/assets/images/home/hero/programmer-illustration.svg";
@@ -81,14 +82,19 @@ export default function HeroSection() {
           I&apos;m a passionate frontend developer based in Germany. I love
           bringing exciting and accessible user interfaces to life.
         </Text>
-        <motion.div
+        <Flex
+          as={motion.div}
+          gap={10}
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
         >
           <BorderBottomLink href="#contact-section" as={motion.a}>
             <Box>Contact me</Box>
           </BorderBottomLink>
-        </motion.div>
+          <BorderBottomLink href={CURRICULUM_PDF} as={motion.a}>
+            <Box>Download CV</Box>
+          </BorderBottomLink>
+        </Flex>
       </Flex>
     </Flex>
   );
