@@ -8,7 +8,6 @@ import { Form } from "../Form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Box,
-  Button,
   Flex,
   SimpleGrid,
   Icon,
@@ -20,6 +19,7 @@ import {
 import { chakra } from "@chakra-ui/react";
 import axios from "axios";
 import Toast from "../Toast";
+import BorderBottomButton from "../BorderBottomButton";
 
 const FORM_SUBMIT_HASH = "aeff163b8996ff808cd5ba47dcf6de7a";
 const formSubmitEndpoint = `https://formsubmit.co/ajax/${FORM_SUBMIT_HASH}`;
@@ -216,19 +216,9 @@ export default function ContactForm() {
         </Form.Field>
 
         <Flex w="full" justifyContent="flex-end" mt={10}>
-          <Button
-            borderBottomWidth="3px"
-            borderBottomColor="green"
-            _hover={{ textColor: "green" }}
-            fontWeight="medium"
-            fontSize="md"
-            paddingBottom={2}
-            textTransform="uppercase"
-            type="submit"
-            alignSelf="flex-end"
-          >
-            {isSubmitting ? "Sending" : "Send message"}
-          </Button>
+          <BorderBottomButton type="submit" zIndex={10}>
+            <Box>{isSubmitting ? "Sending" : "Send message"}</Box>
+          </BorderBottomButton>
         </Flex>
       </SimpleGrid>
     </FormProvider>
