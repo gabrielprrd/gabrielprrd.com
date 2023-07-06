@@ -7,11 +7,11 @@ import {
   Tooltip,
   useColorMode,
 } from "@chakra-ui/react";
-import { Link } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin, FaPhoneAlt } from "react-icons/fa";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import { AiFillMail } from "react-icons/ai";
 import { CONTACT_INFO } from "@/constants/contactInfo";
+import Link from "@/components/infra/Link";
 
 export default function Navigation(props: FlexProps) {
   const { colorMode } = useColorMode();
@@ -26,26 +26,38 @@ export default function Navigation(props: FlexProps) {
       alignItems="center"
       {...props}
     >
-      <Text fontSize="xl" fontWeight="bold">
-        gabrielprrd
-      </Text>
+      <Link
+        href="/"
+        borderBottomColor="green"
+        _hover={{ borderBottomWidth: 2 }}
+        style={{ textDecoration: "none" }}
+      >
+        <Text fontSize="xl" fontWeight="bold" textDecoration="none">
+          gabrielprrd
+        </Text>
+      </Link>
+
       <Flex gap={3}>
         <chakra.nav display="flex" gap={3}>
           <Tooltip label="Github" hasArrow>
-            <Link
-              href="https://github.com/gabrielprrd"
-              _hover={{ color: "green" }}
-            >
-              <Icon as={FaGithub} height="5" w="auto" />
-            </Link>
+            <chakra.span>
+              <Link
+                href="https://github.com/gabrielprrd"
+                _hover={{ color: "green" }}
+              >
+                <Icon as={FaGithub} height="5" w="auto" />
+              </Link>
+            </chakra.span>
           </Tooltip>
           <Tooltip label="Linkedin" hasArrow>
-            <Link
-              href="https://www.linkedin.com/in/gabrielprrd/"
-              _hover={{ color: "green" }}
-            >
-              <Icon as={FaLinkedin} height="5" w="auto" />
-            </Link>
+            <chakra.span>
+              <Link
+                href="https://www.linkedin.com/in/gabrielprrd/"
+                _hover={{ color: "green" }}
+              >
+                <Icon as={FaLinkedin} height="5" w="auto" />
+              </Link>
+            </chakra.span>
           </Tooltip>
         </chakra.nav>
         <Flex h="full" alignItems="flex-start" gap={3}>
