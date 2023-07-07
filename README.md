@@ -4,7 +4,7 @@ A web app to showcase some of my projects and skills.
 
 ## Check it out
 
-You can check it deployed [here](https://gabrielprrd.github.io).
+You can check it deployed [here](https://gabrielprrd.vercel.app/).
 
 ## Installation
 
