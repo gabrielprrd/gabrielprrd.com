@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
+import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
 
 export default function ProjectsSection() {
@@ -44,14 +45,14 @@ export default function ProjectsSection() {
             variants={bottomToTopVariants}
             viewport={{ once: true }}
           >
-            <Box
-              backgroundImage={`url(${project.img.src})`}
-              backgroundPosition={{ base: "center", md: "initial" }}
-              h="30vh"
-              w="100%"
-              bgSize="cover"
-              bgRepeat="no-repeat"
-            />
+            <Box h="30vh" w="full" bgSize="cover" position="relative">
+              <Image
+                src={project.img.src}
+                alt={`${project.title}'s screenshot`}
+                fill
+                style={{ objectFit: "contain" }}
+              />
+            </Box>
             <Flex direction="column" gap={4}>
               <Flex justifyContent="space-between" alignItems="center">
                 <Heading size="md">{t(project.title) ?? project.title}</Heading>

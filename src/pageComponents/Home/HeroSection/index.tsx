@@ -3,7 +3,7 @@ import { CURRICULUM_PDF } from "@/constants/curriculum";
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
-import ProgrammerIllustration from "../../../../public/assets/images/home/hero/programmer-illustration.svg";
+import Image from "next/image";
 
 export default function HeroSection() {
   const { t } = useTranslation();
@@ -19,13 +19,19 @@ export default function HeroSection() {
       mt={{ base: 10, lg: 0 }}
     >
       <Box
-        h="auto"
+        h={{ base: "30vh", lg: "full" }}
         w="60vw"
         as={motion.div}
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
+        position="relative"
       >
-        <ProgrammerIllustration />
+        <Image
+          src="/assets/images/home/hero/programmer-illustration.svg"
+          alt="Illustration of a programmer"
+          fill
+          style={{ objectFit: "contain" }}
+        />
       </Box>
       <Flex
         direction="column"
