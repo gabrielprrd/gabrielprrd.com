@@ -31,7 +31,7 @@ export default function ProjectsSection() {
           <Box>{t("common.links.contactMe")}</Box>
         </BorderBottomLink>
       </Flex>
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={{ base: 10, md: 20 }}>
+      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={{ base: 16, md: 20 }}>
         {projectsInfo.map((project) => (
           <Flex
             width="100%"
@@ -50,7 +50,12 @@ export default function ProjectsSection() {
                 src={project.img.src}
                 alt={`${project.title}'s screenshot`}
                 fill
-                style={{ objectFit: "contain" }}
+                style={{
+                  objectFit: "cover",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  objectPosition: "top",
+                }}
               />
             </Box>
             <Flex direction="column" gap={4}>

@@ -19,7 +19,7 @@ export default function HeroSection() {
       mt={{ base: 10, lg: 0 }}
     >
       <Box
-        h={{ base: "30vh", lg: "full" }}
+        h={{ base: "30vh", md: "40vh", lg: "full" }}
         w="60vw"
         as={motion.div}
         initial={{ x: 100, opacity: 0 }}
