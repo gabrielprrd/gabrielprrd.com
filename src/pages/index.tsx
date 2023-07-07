@@ -29,19 +29,20 @@ export default function Home() {
         <meta property="og:url" content="https://gabrielprrd.vercel.app/" />
         <meta
           property="og:image"
-          content="/assets/images/home/projects/personal-portfolio.png"
+          content="https://i.ibb.co/Rhg3gKn/Screenshot-2023-07-03-at-19-54-14.png"
         />
 
         {/* Twitter */}
         <meta name="twitter:title" content="Gabriel Afonso - Frontend Dev" />
         <meta name="twitter:description" content="Personal portfolio" />
+        <meta property="twitter:domain" content="gabrielprrd.vercel.app" />
         <meta
           property="twitter:url"
           content="https://gabrielprrd.vercel.app/"
         />
         <meta
           name="twitter:image"
-          content="/assets/images/home/projects/personal-portfolio.png"
+          content="https://i.ibb.co/Rhg3gKn/Screenshot-2023-07-03-at-19-54-14.png"
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
