@@ -17,9 +17,33 @@ export default function Home() {
   return (
     <>
       <Head>
+        {/* Primary Meta Tags */}
         <title>Gabriel Afonso - Frontend Dev</title>
         <meta name="description" content="Portfolio website" />
         <link rel="icon" href="/favicon.ico" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Gabriel Afonso - Frontend Dev" />
+        <meta property="og:description" content="Portfolio website" />
+        <meta property="og:url" content="https://gabrielprrd.vercel.app/" />
+        <meta
+          property="og:image"
+          content="/assets/images/home/projects/personal-portfolio.png"
+        />
+
+        {/* Twitter */}
+        <meta name="twitter:title" content="Gabriel Afonso - Frontend Dev" />
+        <meta name="twitter:description" content="Personal portfolio" />
+        <meta
+          property="twitter:url"
+          content="https://gabrielprrd.vercel.app/"
+        />
+        <meta
+          name="twitter:image"
+          content="/assets/images/home/projects/personal-portfolio.png"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <chakra.main
         display="flex"
