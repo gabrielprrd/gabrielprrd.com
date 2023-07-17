@@ -12,7 +12,6 @@ export default function DefaultLayout({ children }: Props) {
     <>
       <Flex
         direction="column"
-        w="100vw"
         minH="100vh"
         px={{ base: 5, lg: 24 }}
         bg={useColorModeValue("white", "black")}
