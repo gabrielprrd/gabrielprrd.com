@@ -56,12 +56,14 @@
         "companies": {
             "title": "Where I've worked",
             "xhockware": {
-                "description": "Xhockware's main focus is creating innovative retail solutions, so I've joined the front-end team to develop different features for some of the largest retailers in Europe."
-                },
-            "exaud": {
-                "description": "A consulting company where I honed my craft in developing web applications. During my tenure, I had the opportunity to collaborate with a talented team and work in some projects for different countries."
-                }
+                "description": "Xhockware's main focus is creating innovative retail solutions, so I've joined the front-end team to develop different features for some of the largest retailers in Europe.",
+                "time": "Jun 2021 - May 2022"
             },
+            "exaud": {
+                "description": "A consulting company where I honed my craft in developing web applications. During my tenure, I had the opportunity to collaborate with a talented team and work in some projects for different countries.",
+                "time": "May 2022 - Apr 2023"
+            }
+        },
         "projects": {
             "title": "Projects",
             "designo": {

@@ -12,13 +12,13 @@ export const COMPANIES: Company[] = [
     description: "home.companies.xhockware.description",
     place: "Porto, Portugal",
     href: "https://www.xhockware.com/pt-pt/",
-    time: "Jun 2021 - May 2022",
+    time: "home.companies.xhockware.time",
   },
   {
     title: "Exaud",
     description: "home.companies.exaud.description",
     place: "Porto, Portugal",
     href: "https://exaud.com/",
-    time: "May 2022 - Apr 2023",
+    time: "home.companies.exaud.time",
   },
 ];

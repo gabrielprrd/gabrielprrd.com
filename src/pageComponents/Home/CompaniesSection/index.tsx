@@ -53,7 +53,7 @@ export default function CompaniesSection() {
               </Flex>
               <Flex justifyContent="space-between">
                 <Text size="sm">{company.place}</Text>
-                <Text>{company.time}</Text>
+                <Text>{t(company.time)}</Text>
               </Flex>
               <Text size="sm">{t(company.description)}</Text>
             </Flex>

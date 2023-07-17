@@ -49,17 +49,19 @@
     },
     "home": {
         "hero": {
-            "heading1": "Prazer em conhecê-lo(a)!",
+            "heading1": "Prazer!",
             "heading2": "Sou Gabriel Afonso.",
             "description": "Frontend developer e entusiasta de tecnologia vivendo na Alemanha. Amo dar vida a interfaces de usuário desafiantes e acessíveis."
         },
         "companies": {
             "title": "Onde trabalhei",
             "xhockware": {
-                "description": "O principal foco da Xhockware está em solucões inovadoras para o setor comercial, então integrei a equipe de front-end para desenvolver diferentes features para alguns dos maiores varejistas da Europa"
+                "description": "O principal foco da Xhockware está em solucões inovadoras para o setor comercial, então integrei a equipe de front-end para desenvolver diferentes features para alguns dos maiores varejistas da Europa.",
+                "time": "Jun 2021 - Mai 2022"
                 },
             "exaud": {
-                "description": "Uma consultoria onde aperfeiçoei minhas capacidades de desenvolver aplicaçoes web. Durante minha estadia, tive a oportunidade de colaborar com uma equipe talentosa e trabalhar em projetos para diferentes paises."
+                "description": "Uma consultoria onde aperfeiçoei minhas capacidades de desenvolver aplicaçoes web. Durante minha estadia, tive a oportunidade de colaborar com uma equipe talentosa e trabalhar em projetos para diferentes países.",
+                "time": "Mai 2022 - Abr 2023"
                 }
             },
         "projects": {
