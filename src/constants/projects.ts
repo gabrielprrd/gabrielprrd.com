@@ -17,10 +17,11 @@ export const projectsInfo: ProjectInfo[] = [
       alt: "Designo homepage screenshot",
     },
     githubUrl: "https://github.com/gabrielprrd/designo",
-    deployedUrl: "" || undefined,
+    deployedUrl: "https://designo-phi.vercel.app/",
     title: "Designo",
     description: "home.projects.designo.description",
     technologies: [
+      "Typescript",
       "Next.js",
       "React",
       "HeadlessUi",
@@ -39,6 +40,7 @@ export const projectsInfo: ProjectInfo[] = [
     title: "Kanban Task Management",
     description: "home.projects.kanban.description",
     technologies: [
+      "Typescript",
       "TRPC",
       "Prisma",
       "MySQL",
@@ -57,10 +59,10 @@ export const projectsInfo: ProjectInfo[] = [
       alt: "Password generator's page screenshot",
     },
     githubUrl: "https://github.com/gabrielprrd/password-generator",
-    deployedUrl: "" || undefined,
+    deployedUrl: "https://password-generator-self-nu.vercel.app/",
     title: "Password Generator",
     description: "home.projects.passwordGenerator.description",
-    technologies: ["Next.js", "React", "ChakraUi"],
+    technologies: ["Typescript", "Next.js", "React", "ChakraUi"],
   },
   {
     img: {
@@ -68,11 +70,12 @@ export const projectsInfo: ProjectInfo[] = [
       alt: "Password generator's page screenshot",
     },
     githubUrl: "https://github.com/gabrielprrd/gabrielprrd.com",
-    deployedUrl: "" || undefined,
+    deployedUrl: "https://gabrielprrd.vercel.app/",
     title: "home.projects.portfolio.title",
     description: "home.projects.portfolio.description",
     technologies: [
-      "Next",
+      "Typescript",
+      "Next.js",
       "React",
       "ChakraUi",
       "Framer Motion",

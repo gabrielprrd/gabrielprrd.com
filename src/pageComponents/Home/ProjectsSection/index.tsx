@@ -10,11 +10,12 @@ import {
   Text,
   Wrap,
   Icon,
+  HStack,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 export default function ProjectsSection() {
   const { t } = useTranslation();
@@ -61,13 +62,25 @@ export default function ProjectsSection() {
             <Flex direction="column" gap={4}>
               <Flex justifyContent="space-between" alignItems="center">
                 <Heading size="md">{t(project.title) ?? project.title}</Heading>
-                <Link
-                  href={project.githubUrl}
-                  _hover={{ color: "green" }}
-                  aria-label="Navigate to project's github page"
-                >
-                  <Icon as={FaGithub} height="6" w="auto" />
-                </Link>
+                <HStack gap={5}>
+                  {!!project.deployedUrl && (
+                    <Link
+                      href={project.deployedUrl}
+                      _hover={{ color: "green" }}
+                      aria-label="Navigate to project's github page"
+                    >
+                      <Icon as={FaExternalLinkAlt} height="5" w="auto" />
+                    </Link>
+                  )}
+
+                  <Link
+                    href={project.githubUrl}
+                    _hover={{ color: "green" }}
+                    aria-label="Navigate to project's github page"
+                  >
+                    <Icon as={FaGithub} height="6" w="auto" />
+                  </Link>
+                </HStack>
               </Flex>
               <Text size="md">{t(project.description)}</Text>
               <Wrap gap={4}>
