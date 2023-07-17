@@ -1,2 +1,3 @@
-export const CURRICULUM_PDF =
-  "https://drive.google.com/uc?export=download&id=1yUQPo4Pg5zusfMGbVJdVq4X1Ka_zyYqL";
+const FILE_ID = "1xGkTcNmh5MiWyc5Rx9ZBkJApEx-KlQiK";
+
+export const CURRICULUM_PDF = `https://drive.google.com/uc?export=download&id=${FILE_ID}`;
