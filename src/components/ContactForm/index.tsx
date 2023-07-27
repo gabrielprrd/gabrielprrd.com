@@ -97,6 +97,7 @@ export default function ContactForm() {
           <Box w="full" position="relative" display="flex" h="45px">
             <Form.Input
               name="name"
+              id="name"
               position="absolute"
               left={0}
               border="none"
@@ -139,6 +140,7 @@ export default function ContactForm() {
           <Box w="full" position="relative" display="flex" h="45px">
             <Form.Input
               name="email"
+              id="email"
               position="absolute"
               left={0}
               border="none"
@@ -181,6 +183,7 @@ export default function ContactForm() {
           <Box w="full" position="relative" display="flex" h="45px">
             <Form.TextArea
               name="message"
+              id="message"
               position="absolute"
               left={0}
               border="none"
