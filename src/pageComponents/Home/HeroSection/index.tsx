@@ -1,5 +1,6 @@
 import BorderBottomLink from "@/components/BorderBottomLink";
 import { CURRICULUM_PDF } from "@/constants/curriculum";
+import { isJsEnabled } from "@/utils/isJsEnabled";
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
@@ -22,7 +23,7 @@ export default function HeroSection() {
         h={{ base: "30vh", md: "40vh", lg: "full" }}
         w="60vw"
         as={motion.div}
-        initial={{ x: 100, opacity: 0 }}
+        initial={isJsEnabled ? { x: 100, opacity: 0 } : { x: 0, opacity: 1 }}
         animate={{ x: 0, opacity: 1 }}
         position="relative"
       >
@@ -45,14 +46,18 @@ export default function HeroSection() {
             as={motion.h1}
             fontSize={{ base: "4xl", lg: "7xl" }}
             lineHeight="-2.5px"
-            initial={{ x: -100, opacity: 0 }}
+            initial={
+              isJsEnabled ? { x: -100, opacity: 0 } : { x: 0, opacity: 1 }
+            }
             animate={{ x: 0, opacity: 1 }}
           >
             {t("home.hero.heading1")}
           </Heading>
           <Box
             as={motion.div}
-            initial={{ x: -100, opacity: 0 }}
+            initial={
+              isJsEnabled ? { x: -100, opacity: 0 } : { x: 0, opacity: 1 }
+            }
             animate={{ x: 0, opacity: 1 }}
           >
             <Heading
@@ -71,7 +76,7 @@ export default function HeroSection() {
         <Text
           width={{ md: "60%" }}
           as={motion.p}
-          initial={{ x: -100, opacity: 0 }}
+          initial={isJsEnabled ? { x: -100, opacity: 0 } : { x: 0, opacity: 1 }}
           animate={{ x: 0, opacity: 1 }}
         >
           {t("home.hero.description")}
@@ -79,7 +84,7 @@ export default function HeroSection() {
         <Flex
           as={motion.div}
           gap={10}
-          initial={{ x: -100, opacity: 0 }}
+          initial={isJsEnabled ? { x: -100, opacity: 0 } : { x: 0, opacity: 1 }}
           animate={{ x: 0, opacity: 1 }}
         >
           <BorderBottomLink
