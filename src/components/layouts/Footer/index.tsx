@@ -9,6 +9,7 @@ import {
   Divider,
 } from "@chakra-ui/react";
 import { useTranslation } from "next-i18next";
+import LogoHomePageLink from "../LogoHomePageLink";
 import Navigation from "../Navigation";
 
 export default function Footer() {
@@ -41,7 +42,10 @@ export default function Footer() {
       </Flex>
 
       <Divider my={10} />
-      <Navigation />
+      <Flex justifyContent="space-between">
+        <LogoHomePageLink />
+        <Navigation />
+      </Flex>
     </chakra.footer>
   );
 }

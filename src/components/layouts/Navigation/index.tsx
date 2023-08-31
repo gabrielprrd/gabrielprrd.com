@@ -1,47 +1,23 @@
-import {
-  chakra,
-  Flex,
-  Text,
-  Icon,
-  type FlexProps,
-  Tooltip,
-  Box,
-} from "@chakra-ui/react";
+import { chakra, Icon, Tooltip } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin, FaPhoneAlt } from "react-icons/fa";
-import ThemeSwitcher from "@/components/ThemeSwitcher";
 import { AiFillMail } from "react-icons/ai";
 import { CONTACT_INFO } from "@/constants/contactInfo";
 import Link from "@/components/infra/Link";
 import { useTranslation } from "next-i18next";
-import LanguageSelect from "@/components/LanguageSelect";
 
-export default function Navigation(props: FlexProps) {
+export default function Navigation() {
   const { t } = useTranslation();
 
   return (
-    <Flex
-      bgColor="transparent"
-      py={3}
-      gap={3}
-      justify="space-between"
-      direction={{ sm: "row" }}
-      alignItems="center"
-      {...props}
-    >
-      <Link
-        aria-label="Go to home page"
-        href="/"
-        borderBottomColor="green"
-        _hover={{ borderBottomWidth: 2 }}
-        style={{ textDecoration: "none" }}
+    <chakra.nav>
+      {/* // TODO: change icons for others svgs in order to fix accessibility */}
+      <chakra.ul
+        display="flex"
+        alignItems="center"
+        gap={3}
+        listStyleType="none"
       >
-        <Text fontSize="2xl" fontWeight="bold" textDecoration="none">
-          gabrielprrd
-        </Text>
-      </Link>
-
-      <Flex gap={3} alignItems="center">
-        <chakra.nav display="flex" gap={3}>
+        <chakra.li>
           <Tooltip label="Github" hasArrow>
             <chakra.span>
               <Link
@@ -53,6 +29,9 @@ export default function Navigation(props: FlexProps) {
               </Link>
             </chakra.span>
           </Tooltip>
+        </chakra.li>
+
+        <chakra.li>
           <Tooltip label="Linkedin" hasArrow>
             <chakra.span>
               <Link
@@ -64,57 +43,38 @@ export default function Navigation(props: FlexProps) {
               </Link>
             </chakra.span>
           </Tooltip>
-        </chakra.nav>
-        <Flex h="full" alignItems="center" gap={3}>
+        </chakra.li>
+
+        <chakra.li>
           <Tooltip label="Email" hasArrow shouldWrapChildren>
             <Link
               href={`mailto:${CONTACT_INFO.email}`}
               aria-label="Send email to Gabriel"
             >
               <Icon
-                cursor="pointer"
                 _hover={{ color: "green" }}
                 as={AiFillMail}
                 boxSize="2.1em"
               />
             </Link>
           </Tooltip>
+        </chakra.li>
+
+        <chakra.li>
           <Tooltip label={t("common.links.phone")} hasArrow shouldWrapChildren>
             <Link
               href={`tel:${CONTACT_INFO.phone}`}
               aria-label="Call Gabriel's phone number"
             >
               <Icon
-                cursor="pointer"
                 _hover={{ color: "green" }}
                 as={FaPhoneAlt}
                 boxSize="1.4em"
               />
             </Link>
           </Tooltip>
-        </Flex>
-      </Flex>
-      <Box
-        h="full"
-        alignItems="flex-start"
-        gap={3}
-        display={{ base: "none", md: "flex" }}
-      >
-        <Tooltip
-          shouldWrapChildren
-          label={t("common.themeSwitcher.label")}
-          hasArrow
-        >
-          <ThemeSwitcher marginTop={-2} />
-        </Tooltip>
-        <Tooltip
-          shouldWrapChildren
-          label={t("common.languageSelect.label")}
-          hasArrow
-        >
-          <LanguageSelect marginTop={-1 / 2} />
-        </Tooltip>
-      </Box>
-    </Flex>
+        </chakra.li>
+      </chakra.ul>
+    </chakra.nav>
   );
 }
