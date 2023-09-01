@@ -11,5 +11,16 @@ interface Props extends TextareaProps {
 export function TextArea({ name, ...props }: Props) {
   const { register } = useFormContext();
 
-  return <ChakraTextarea id={name} {...register(name)} {...props} />;
+  return (
+    <ChakraTextarea
+      id={name}
+      {...register(name)}
+      border="none"
+      borderRadius={0}
+      borderBottom="1px"
+      _focus={{ borderBottomColor: "green" }}
+      _hover={{ borderBottom: "2px" }}
+      {...props}
+    />
+  );
 }

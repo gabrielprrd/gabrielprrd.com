@@ -1,8 +1,9 @@
 import { useFormContext } from "react-hook-form";
-import { type BoxProps, chakra, Text } from "@chakra-ui/react";
+import { Text, Icon, Flex, type FlexProps } from "@chakra-ui/react";
 import { useTranslation } from "next-i18next";
+import { FaExclamationCircle } from "react-icons/fa";
 
-interface Props extends BoxProps {
+interface Props extends FlexProps {
   field: string;
 }
 
@@ -18,8 +19,17 @@ export function ErrorMessage({ field, ...props }: Props) {
   if (!fieldError) return null;
 
   return (
-    <chakra.span textAlign="right" {...props}>
-      <Text color="tomato">{t(fieldError.message as string)}</Text>
-    </chakra.span>
+    <Flex
+      justifyContent="flex-end"
+      alignItems="center"
+      gap={2}
+      h="30px"
+      {...props}
+    >
+      <Icon as={FaExclamationCircle} height={4} w="auto" color="tomato" />
+      <Text color="tomato" aria-describedby={field}>
+        {t(fieldError.message as string)}
+      </Text>
+    </Flex>
   );
 }

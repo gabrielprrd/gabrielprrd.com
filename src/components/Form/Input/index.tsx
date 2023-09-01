@@ -8,5 +8,16 @@ interface Props extends InputElementProps {
 export function Input({ name, ...props }: Props) {
   const { register } = useFormContext();
 
-  return <ChakraInput id={name} {...register(name)} {...props} />;
+  return (
+    <ChakraInput
+      id={name}
+      {...register(name)}
+      border="none"
+      borderRadius={0}
+      borderBottom="1px"
+      _focus={{ borderBottomColor: "green" }}
+      _hover={{ borderBottom: "2px" }}
+      {...props}
+    />
+  );
 }
