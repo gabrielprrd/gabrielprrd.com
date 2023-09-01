@@ -1,4 +1,9 @@
-import { Box, type LinkProps, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  type LinkProps,
+  useColorModeValue,
+  usePrefersReducedMotion,
+} from "@chakra-ui/react";
 import { type ReactNode } from "react";
 import Link from "../infra/Link";
 
@@ -7,6 +12,10 @@ interface Props extends LinkProps {
 }
 
 export default function BorderBottomLink({ children, ...props }: Props) {
+  const prefersReducedMotion = usePrefersReducedMotion();
+  const textColor = useColorModeValue("black", "white");
+  const hoverTextColor = useColorModeValue("white", "black");
+
   return (
     <Link
       display="flex"
@@ -14,7 +23,11 @@ export default function BorderBottomLink({ children, ...props }: Props) {
       alignItems="center"
       position="relative"
       role="group"
-      _hover={{ textColor: useColorModeValue("white", "black") }}
+      _hover={
+        prefersReducedMotion
+          ? { textColor: textColor }
+          : { textColor: hoverTextColor }
+      }
       fontWeight="medium"
       fontSize="md"
       padding={3}
@@ -25,7 +38,9 @@ export default function BorderBottomLink({ children, ...props }: Props) {
       {children}
       <Box
         height="2px"
-        _groupHover={{ height: "full" }}
+        _groupHover={
+          prefersReducedMotion ? { height: "2px" } : { height: "full" }
+        }
         position="absolute"
         bottom="0"
         w="full"
