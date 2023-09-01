@@ -23,6 +23,7 @@ export default function BorderBottomLink({ children, ...props }: Props) {
       alignItems="center"
       position="relative"
       role="group"
+      textColor={textColor}
       _hover={
         prefersReducedMotion
           ? { textColor: textColor }

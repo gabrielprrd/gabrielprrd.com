@@ -12,9 +12,6 @@ interface Props extends ButtonProps {
   children: ReactNode;
 }
 
-// TODO: disable animation based on prefer-reduced-motion
-// https://chakra-ui.com/docs/hooks/use-prefers-reduced-motion
-
 export default function BorderBottomButton({ children, ...props }: Props) {
   const prefersReducedMotion = usePrefersReducedMotion();
   const textColor = useColorModeValue("black", "white");
@@ -28,6 +25,7 @@ export default function BorderBottomButton({ children, ...props }: Props) {
       alignItems="center"
       position="relative"
       role="group"
+      textColor={textColor}
       _hover={
         prefersReducedMotion
           ? { textColor: textColor }
