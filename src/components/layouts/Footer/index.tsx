@@ -18,7 +18,7 @@ export default function Footer() {
   return (
     <chakra.footer
       w="full"
-      bgColor={useColorModeValue("grey", "darkGrey")}
+      bgColor={useColorModeValue("lightGrey", "darkGrey")}
       px={{ base: 5, lg: 24 }}
       pb={{ base: 5, lg: 16 }}
       pt={{ base: 10, lg: 16 }}
@@ -41,7 +41,7 @@ export default function Footer() {
         </SimpleGrid>
       </Flex>
 
-      <Divider my={10} />
+      <Divider my={10} color={useColorModeValue("black", "white")} />
       <Flex justifyContent="space-between">
         <LogoHomePageLink />
         <Navigation />
