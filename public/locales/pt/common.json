@@ -45,6 +45,9 @@
         "footer": {
             "heading": "Entre em contato!",
             "description": "Eu adoraria ouvir sobre seus projetos e como posso ajudar. Por favor, preencha o formulário e entrarei em contato o quanto antes."
+        },
+        "blogPostCard": {
+            "readingTime": "min de leitura"
         }
     },
     "home": {
@@ -79,6 +82,16 @@
                 "title": "Este site (portfolio)",
                 "description": "Meu portfolio, onde apresento projetos e conto um pouco mais sobre mim. Possui features como internacionalização, temas claro/escuro e validação de formulários."
             }
+        },
+        "blogPosts": {
+            "title": "Últimos artigos",
+            "linkForBlog": "Mais no blog"
         }
+    },
+    "blog": {
+        "devToCallToAction": "Gostando do conteúdo? Por favor, comenta no"
+    },
+    "notFound": {
+        "title": "Oops! Página não encontrada."
     }
 }
