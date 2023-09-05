@@ -16,42 +16,7 @@ Home.getLayout = function (page: ReactElement) {
 export default function Home() {
   return (
     <>
-      <Head>
-        {/* Primary Meta Tags */}
-        <title>Gabriel Afonso - Full-Stack Developer</title>
-        <meta name="description" content="Portfolio website" />
-        <link rel="icon" href="/favicon.ico" />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="Gabriel Afonso - Full-Stack Developer"
-        />
-        <meta property="og:description" content="Portfolio website" />
-        <meta property="og:url" content="https://gabrielprrd.vercel.app/" />
-        <meta
-          property="og:image"
-          content="https://i.ibb.co/Rhg3gKn/Screenshot-2023-07-03-at-19-54-14.png"
-        />
-
-        {/* Twitter */}
-        <meta
-          name="twitter:title"
-          content="Gabriel Afonso - Full-Stack Developer"
-        />
-        <meta name="twitter:description" content="Personal portfolio" />
-        <meta property="twitter:domain" content="gabrielprrd.vercel.app" />
-        <meta
-          property="twitter:url"
-          content="https://gabrielprrd.vercel.app/"
-        />
-        <meta
-          name="twitter:image"
-          content="https://i.ibb.co/Rhg3gKn/Screenshot-2023-07-03-at-19-54-14.png"
-        />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
+      <Head />
       <chakra.main
         display="flex"
         flexDirection="column"
