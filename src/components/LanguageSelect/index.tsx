@@ -1,4 +1,4 @@
-import { Select, type SelectProps } from "@chakra-ui/react";
+import { Select, useColorModeValue, type SelectProps } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 
 const LANGUAGES = ["en", "pt"];
@@ -14,6 +14,7 @@ export default function LanguageSelect(props: SelectProps) {
       textTransform="uppercase"
       fontWeight="bold"
       defaultValue={router.locale}
+      color={useColorModeValue("black", "white")}
       onChange={(e) =>
         router.push(
           {
