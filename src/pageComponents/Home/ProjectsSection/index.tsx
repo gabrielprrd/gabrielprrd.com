@@ -1,7 +1,10 @@
 import BorderBottomLink from "@/components/BorderBottomLink";
 import Link from "@/components/infra/Link";
 import { projectsInfo } from "@/constants/projects";
-import { bottomToTopVariants } from "@/utils/animations/bottomToTopVariants";
+import {
+  BOTTOM_TOP_VARIANTS,
+  NO_JS_BOTTOM_TOP_VARIANTS,
+} from "@/constants/animations/bottomToTopVariants";
 import {
   Box,
   Flex,
@@ -11,17 +14,28 @@ import {
   Wrap,
   Icon,
   HStack,
+  chakra,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { getAnimationVariants } from "@/utils/getAnimationVariants";
 
 export default function ProjectsSection() {
   const { t } = useTranslation();
+  const variants = getAnimationVariants(
+    BOTTOM_TOP_VARIANTS,
+    NO_JS_BOTTOM_TOP_VARIANTS
+  );
 
   return (
-    <Flex direction="column" gap={10}>
+    <chakra.section
+      id="projects-section"
+      display="flex"
+      flexDirection="column"
+      gap={10}
+    >
       <Flex justifyContent="space-between" gap={4} alignItems="center">
         <Heading size="lg">{t("home.projects.title")}</Heading>
         <BorderBottomLink
@@ -43,7 +57,7 @@ export default function ProjectsSection() {
             as={motion.div}
             initial="offscreen"
             whileInView="onscreen"
-            variants={bottomToTopVariants}
+            variants={variants}
             viewport={{ once: true }}
           >
             <Box h="30vh" w="full" bgSize="cover" position="relative">
@@ -94,6 +108,6 @@ export default function ProjectsSection() {
           </Flex>
         ))}
       </SimpleGrid>
-    </Flex>
+    </chakra.section>
   );
 }

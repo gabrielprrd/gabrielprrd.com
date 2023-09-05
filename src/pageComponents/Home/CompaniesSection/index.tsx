@@ -1,5 +1,9 @@
+import {
+  BOTTOM_TOP_VARIANTS,
+  NO_JS_BOTTOM_TOP_VARIANTS,
+} from "@/constants/animations/bottomToTopVariants";
 import { COMPANIES } from "@/constants/companies";
-import { bottomToTopVariants } from "@/utils/animations/bottomToTopVariants";
+import { getAnimationVariants } from "@/utils/getAnimationVariants";
 import {
   Flex,
   Heading,
@@ -7,15 +11,25 @@ import {
   LinkOverlay,
   SimpleGrid,
   Text,
+  chakra,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
 
 export default function CompaniesSection() {
   const { t } = useTranslation();
+  const variants = getAnimationVariants(
+    BOTTOM_TOP_VARIANTS,
+    NO_JS_BOTTOM_TOP_VARIANTS
+  );
 
   return (
-    <Flex direction="column" gap={10}>
+    <chakra.section
+      id="companies-section"
+      display="flex"
+      flexDirection="column"
+      gap={10}
+    >
       <Flex justifyContent="space-between" gap={4}>
         <Heading size="lg">{t("home.companies.title")}</Heading>
       </Flex>
@@ -31,7 +45,7 @@ export default function CompaniesSection() {
             as={motion.div}
             initial="offscreen"
             whileInView="onscreen"
-            variants={bottomToTopVariants}
+            variants={variants}
             viewport={{ once: true }}
           >
             <Flex direction="column" gap={4}>
@@ -60,6 +74,6 @@ export default function CompaniesSection() {
           </LinkBox>
         ))}
       </SimpleGrid>
-    </Flex>
+    </chakra.section>
   );
 }

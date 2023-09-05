@@ -1,7 +1,7 @@
 import BorderBottomLink from "@/components/BorderBottomLink";
 import { CURRICULUM_PDF } from "@/constants/curriculum";
 import { isJsEnabled } from "@/utils/isJsEnabled";
-import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, chakra } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
@@ -10,9 +10,11 @@ export default function HeroSection() {
   const { t } = useTranslation();
 
   return (
-    <Flex
+    <chakra.section
+      id="hero-section"
       as={motion.div}
-      direction={{ base: "column", lg: "row-reverse" }}
+      display="flex"
+      flexDirection={{ base: "column", lg: "row-reverse" }}
       alignItems={{ base: "center", lg: "center" }}
       h={{ lg: "80vh" }}
       position="relative"
@@ -103,6 +105,6 @@ export default function HeroSection() {
           </BorderBottomLink>
         </Flex>
       </Flex>
-    </Flex>
+    </chakra.section>
   );
 }

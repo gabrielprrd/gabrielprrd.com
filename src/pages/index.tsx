@@ -23,18 +23,12 @@ export default function Home() {
         gap={{ base: 20, md: 36 }}
         pb={{ base: 20, md: 36 }}
       >
-        <section id="hero-section">
-          <HeroSection />
-        </section>
-        <Divider />
-        <section id="companies-section">
-          <CompaniesSection />
-        </section>
-        <Divider />
-        <section id="projects-section">
-          <ProjectsSection />
-        </section>
-        <Divider />
+        <HeroSection />
+        <Divider color={useColorModeValue("black", "white")} />
+        <CompaniesSection />
+        <Divider color={useColorModeValue("black", "white")} />
+        <ProjectsSection />
+        <Divider color={useColorModeValue("black", "white")} />
       </chakra.main>
     </>
   );
