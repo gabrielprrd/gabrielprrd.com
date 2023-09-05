@@ -20,9 +20,6 @@ export default function BorderBottomButton({ children, ...props }: Props) {
   return (
     <Button
       as={motion.button}
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
       position="relative"
       role="group"
       textColor={textColor}
@@ -37,6 +34,7 @@ export default function BorderBottomButton({ children, ...props }: Props) {
       textTransform="uppercase"
       transition="0.1s ease"
       whileTap={{ scale: 0.95 }}
+      border="transparent"
       {...props}
     >
       {children}
