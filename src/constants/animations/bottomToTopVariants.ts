@@ -1,6 +1,6 @@
 import { type Variants } from "framer-motion";
 
-export const bottomToTopVariants: Variants = {
+export const BOTTOM_TOP_VARIANTS: Variants = {
   offscreen: {
     y: 300,
   },
@@ -11,5 +11,11 @@ export const bottomToTopVariants: Variants = {
       bounce: 0.4,
       duration: 0.8,
     },
+  },
+};
+
+export const NO_JS_BOTTOM_TOP_VARIANTS: Variants = {
+  offscreen: {
+    y: 0,
   },
 };
