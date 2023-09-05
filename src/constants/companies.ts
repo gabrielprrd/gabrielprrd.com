@@ -1,12 +1,4 @@
-interface Company {
-  title: string;
-  description: string;
-  place: string;
-  href: string;
-  time: string;
-}
-
-export const COMPANIES: Company[] = [
+export const COMPANIES = [
   {
     title: "Xhockware",
     description: "home.companies.xhockware.description",
