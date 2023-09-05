@@ -9,7 +9,7 @@ export default function Navigation() {
   const { t } = useTranslation();
 
   return (
-    <chakra.nav>
+    <chakra.nav aria-label="social media and contact">
       {/* // TODO: change icons for others svgs in order to fix accessibility */}
       <chakra.ul
         display="flex"
