@@ -118,7 +118,7 @@ export const getStaticPaths = async () => {
     paths: articles.map((article) => ({
       params: { slug: article.slug },
     })),
-    fallback: false,
+    fallback: "blocking",
   };
 };
 
@@ -150,5 +150,6 @@ export const getStaticProps = async ({ params, locale }: Params) => {
         ["en", "pt"]
       )),
     },
+    revalidate: 60 * 60 * 24, // 1 day in seconds
   };
 };
