@@ -21,6 +21,7 @@ import Link from "@/components/infra/Link";
 import { type Article } from "@/models/article.js";
 import { articleTheme } from "@/styles/articleTheme";
 import Image from "@/components/infra/Image";
+import { ARTICLES_REVALIDATION_TIME_SECONDS } from "@/constants/articlesRevalidationTimeSeconds";
 
 BlogPost.getLayout = function (page: ReactElement) {
   return <DefaultLayout>{page}</DefaultLayout>;
@@ -150,6 +151,6 @@ export const getStaticProps = async ({ params, locale }: Params) => {
         ["en", "pt"]
       )),
     },
-    revalidate: 60 * 60 * 24, // 1 day in seconds
+    revalidate: ARTICLES_REVALIDATION_TIME_SECONDS,
   };
 };
