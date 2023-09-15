@@ -11,6 +11,7 @@ import Head from "@/components/layouts/Head";
 import BlogPostsSection from "@/pageComponents/Home/BlogPostsSection";
 import BlogService from "@/services/blogService";
 import { type Article } from "@/models/article";
+import { ARTICLES_REVALIDATION_TIME_SECONDS } from "@/constants/articlesRevalidationTimeSeconds";
 
 Home.getLayout = function (page: ReactElement) {
   return <DefaultLayout>{page}</DefaultLayout>;
@@ -72,5 +73,6 @@ export const getStaticProps = async ({ locale }: Params) => {
         "pt",
       ])),
     },
+    revalidate: ARTICLES_REVALIDATION_TIME_SECONDS,
   };
 };
