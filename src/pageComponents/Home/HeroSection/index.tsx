@@ -1,10 +1,8 @@
 import BorderBottomLink from "@/components/BorderBottomLink";
+import Image from "@/components/infra/Image";
 import { CURRICULUM_PDF } from "@/constants/curriculum";
-import { isJsEnabled } from "@/utils/isJsEnabled";
 import { Box, Flex, Heading, Text, chakra } from "@chakra-ui/react";
-import { motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
-import Image from "next/image";
 
 export default function HeroSection() {
   const { t } = useTranslation();
@@ -12,7 +10,6 @@ export default function HeroSection() {
   return (
     <chakra.section
       id="hero-section"
-      as={motion.div}
       display="flex"
       flexDirection={{ base: "column", lg: "row-reverse" }}
       alignItems={{ base: "center", lg: "center" }}
@@ -24,9 +21,6 @@ export default function HeroSection() {
       <Box
         h={{ base: "30vh", md: "40vh", lg: "full" }}
         w="60vw"
-        as={motion.div}
-        initial={isJsEnabled ? { x: 100, opacity: 0 } : { x: 0, opacity: 1 }}
-        animate={{ x: 0, opacity: 1 }}
         position="relative"
       >
         <Image
@@ -45,60 +39,34 @@ export default function HeroSection() {
       >
         <Flex direction="column">
           <Heading
-            as={motion.h1}
+            as="h1"
             fontSize={{ base: "4xl", lg: "7xl" }}
             lineHeight="-2.5px"
-            initial={
-              isJsEnabled ? { x: -100, opacity: 0 } : { x: 0, opacity: 1 }
-            }
-            animate={{ x: 0, opacity: 1 }}
           >
             {t("home.hero.heading1")}
           </Heading>
-          <Box
-            as={motion.div}
-            initial={
-              isJsEnabled ? { x: -100, opacity: 0 } : { x: 0, opacity: 1 }
-            }
-            animate={{ x: 0, opacity: 1 }}
+          <Heading
+            as="h1"
+            textDecoration="underline"
+            textDecorationColor="green"
+            textDecorationThickness={{ base: "5px", lg: "10px" }}
+            fontSize={{ base: "4xl", lg: "7xl" }}
+            lineHeight="-2.5px"
           >
-            <Heading
-              as="span"
-              textDecoration="underline"
-              textDecorationColor="green"
-              textDecorationThickness={{ base: "5px", lg: "10px" }}
-              fontSize={{ base: "4xl", lg: "7xl" }}
-              lineHeight="-2.5px"
-            >
-              {t("home.hero.heading2")}
-            </Heading>
-          </Box>
+            {t("home.hero.heading2")}
+          </Heading>
         </Flex>
 
-        <Text
-          width={{ md: "60%" }}
-          as={motion.p}
-          initial={isJsEnabled ? { x: -100, opacity: 0 } : { x: 0, opacity: 1 }}
-          animate={{ x: 0, opacity: 1 }}
-        >
-          {t("home.hero.description")}
-        </Text>
-        <Flex
-          as={motion.div}
-          gap={10}
-          initial={isJsEnabled ? { x: -100, opacity: 0 } : { x: 0, opacity: 1 }}
-          animate={{ x: 0, opacity: 1 }}
-        >
+        <Text>{t("home.hero.description")}</Text>
+        <Flex gap={10}>
           <BorderBottomLink
             href="#contact-section"
-            as={motion.a}
             aria-label="Navigate to contact form section"
           >
             <Box>{t("common.links.contactMe")}</Box>
           </BorderBottomLink>
           <BorderBottomLink
             href={CURRICULUM_PDF}
-            as={motion.a}
             aria-label="Download Curriculum Vitae in pdf format"
           >
             <Box>{t("common.links.downloadCV")}</Box>
