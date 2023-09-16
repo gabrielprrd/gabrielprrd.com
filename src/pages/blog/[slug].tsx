@@ -88,11 +88,15 @@ export default function BlogPost({ article }: Props) {
           <Box
             position="relative"
             overflow="hidden"
-            height="40vh"
-            my={10}
+            height={{ base: "20vh", md: "25vh", lg: "30vh" }}
             boxShadow="md"
           >
-            <Image fill="true" objectFit="cover" src={cover_image} alt="" />
+            <Image
+              fill="true"
+              objectFit="contain"
+              src={cover_image}
+              alt="Blog post cover"
+            />
           </Box>
           <ReactMarkdown
             components={ChakraUIRenderer(articleTheme)}
