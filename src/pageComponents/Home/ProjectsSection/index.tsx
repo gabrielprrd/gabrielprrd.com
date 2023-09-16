@@ -18,9 +18,9 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
-import Image from "next/image";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { getAnimationVariants } from "@/utils/getAnimationVariants";
+import Image from "@/components/infra/Image";
 
 export default function ProjectsSection() {
   const { t } = useTranslation();
@@ -64,13 +64,11 @@ export default function ProjectsSection() {
               <Image
                 src={project.img.src}
                 alt={`${project.title}'s screenshot`}
-                fill
-                style={{
-                  objectFit: "cover",
-                  marginLeft: "auto",
-                  marginRight: "auto",
-                  objectPosition: "top",
-                }}
+                fill="true"
+                objectFit="cover"
+                marginLeft="auto"
+                marginRight="auto"
+                objectPosition="top"
               />
             </Box>
             <Flex direction="column" gap={4}>

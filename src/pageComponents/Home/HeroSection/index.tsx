@@ -32,8 +32,8 @@ export default function HeroSection() {
         <Image
           src="/assets/images/home/hero/programmer-illustration.svg"
           alt="Illustration of a programmer"
-          fill
-          style={{ objectFit: "contain" }}
+          fill="true"
+          objectFit="contain"
         />
       </Box>
       <Flex
