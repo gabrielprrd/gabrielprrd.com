@@ -53,7 +53,7 @@
     "home": {
         "hero": {
             "heading1": "Prazer!",
-            "heading2": "Sou Gabriel Afonso.",
+            "heading2": "Sou Gabriel Perroud.",
             "description": "Full-Stack developer com extensa experiência desenvolvendo soluções de software escaláveis, acessíveis e performáticas para clientes americanos e europeus."
         },
         "companies": {
@@ -65,6 +65,10 @@
             "exaud": {
                 "description": "Uma consultoria onde aperfeiçoei minhas capacidades de desenvolver aplicaçoes web. Durante minha estadia, tive a oportunidade de colaborar com uma equipe talentosa e trabalhar em projetos para diferentes países.",
                 "time": "Mai 2022 - Abr 2023"
+                },
+            "onestop-pro": {
+                "description": "Na OneStop Pro, nós automatizamos inúmeros processos em áreas de construção por toda a Alemanha: tracking de máquinas, gerenciamento e muito mais.",
+                "time": "Nov 2023 - Hoje"
                 }
             },
         "projects": {

@@ -21,7 +21,7 @@ export default function Blog({ articles, error }: Props) {
   return (
     <>
       <Head
-        title="Blog - Gabriel Afonso"
+        title="Blog - Gabriel Perroud"
         description="Web dev tips"
         url="https://gabrielprrd.de/blog"
       />

@@ -21,7 +21,7 @@
     "chakra-ui-markdown-renderer": "^4.1.0",
     "framer-motion": "^10.12.17",
     "i18next": "^23.2.7",
-    "next": "^13.4.2",
+    "next": "^16.0.7",
     "next-i18next": "^14.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",

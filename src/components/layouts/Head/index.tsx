@@ -10,7 +10,7 @@ type HeadProps = {
 type Props = Partial<HeadProps>;
 
 export default function Head({
-  title = "Gabriel Afonso - Full-Stack Developer",
+  title = "Gabriel Perroud - Full-Stack Developer",
   description = "Portfolio website",
   url = "https://gabrielprrd.vercel.app/",
   image = "https://i.ibb.co/Rhg3gKn/Screenshot-2023-07-03-at-19-54-14.png",

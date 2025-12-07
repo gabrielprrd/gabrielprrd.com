@@ -6,11 +6,23 @@ const config = {
   reactStrictMode: true,
   i18n: i18nextConfig.i18n,
   images: {
-    domains: [
-      'res.cloudinary.com',
-      "dev.to"
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'dev.to',
+      },
+      {
+        protocol: 'https',
+        hostname: 'media2.dev.to',
+      },
     ],
   },
+  turbopack: {},
+  // We override turbopack with webpack
   webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((/** @type {{ test: { test: (arg0: string) => any; }; }} */ rule) =>

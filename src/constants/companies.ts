@@ -13,4 +13,11 @@ export const COMPANIES = [
     href: "https://exaud.com/",
     time: "home.companies.exaud.time",
   },
+  {
+    title: "OneStop Pro®",
+    description: "home.companies.onestop-pro.description",
+    place: "Passau, Germany",
+    href: "https://www.onestop-pro.com/en/",
+    time: "home.companies.onestop-pro.time",
+  },
 ];
